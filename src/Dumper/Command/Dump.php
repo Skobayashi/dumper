@@ -60,6 +60,9 @@ class Dump extends Command
         if (! getenv('AWS_SECRET_ACCESS_KEY')) {
             putenv(sprintf('AWS_SECRET_ACCESS_KEY=%s', $config['aws']['secret_key']));
         }
+        if (! getenv('AWS_DEFAULT_REGION')) {
+            putenv(sprintf('AWS_DEFAULT_REGION=%s', $config['aws']['s3']['region']));
+        }
 
         if (! isset($config['hosts'][$hostname])) {
             throw new InvalidArgumentException('ホスト名が間違っています');
