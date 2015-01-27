@@ -1,0 +1,27 @@
+{
+    "name": "Skobayashi/dumper",
+    "description":" ",
+    "keywords":[],
+    "license": "MIT",
+    "autoload":{
+        "psr-0":{
+            "Dumper": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/console": "2.*",
+        "symfony/config": "2.*",
+        "symfony/class-loader": "2.*",
+        "symfony/yaml": "2.*",
+        "aws/aws-sdk-php": "2.*",
+        "app2641/aws-client-manager": "*"
+    },
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
+    },
+    "bin": ["bin/dumper"],
+    "config":{
+        "bin-dir": "bin"
+    }
+}

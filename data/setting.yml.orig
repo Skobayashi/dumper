@@ -1,0 +1,17 @@
+aws:
+    access_key: your_aws_access_key
+    secret_key: your_aws_secret_key
+    s3:
+        bucket: s3_bucket_name
+        region: your_region
+    glacier:
+        bucket: s3_glacier_bucket_name
+        region: your_region
+
+hosts:
+    hostname:
+        user: your_database_user
+        pass: your_database_password
+        databases:
+            - database_name
+
