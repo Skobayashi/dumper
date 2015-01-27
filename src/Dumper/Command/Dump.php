@@ -55,10 +55,10 @@ class Dump extends Command
 
         // aws configure
         if (! getenv('AWS_ACCESS_KEY_ID')) {
-            putenv('AWS_ACCESS_KEY_ID', $config['aws']['access_key']);
+            putenv(sprintf('AWS_ACCESS_KEY_ID=%s', $config['aws']['access_key']));
         }
         if (! getenv('AWS_SECRET_ACCESS_KEY')) {
-            putenv('AWS_SECRET_ACCESS_KEY', $config['aws']['secret_key']);
+            putenv(sprintf('AWS_SECRET_ACCESS_KEY=%s', $config['aws']['secret_key']));
         }
 
         if (! isset($config['hosts'][$hostname])) {
